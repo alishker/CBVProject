@@ -1,0 +1,12 @@
+{% extends 'CBVApp/base.html' %}
+
+{% block content %}
+<h3>These are list of all schools</h3>
+<ol>
+    {% for school in schools %}
+
+    <li><a href="{{school.id}}">{{school.name}}</a></li>
+    {% endfor %}
+</ol>
+
+{% endblock content %}

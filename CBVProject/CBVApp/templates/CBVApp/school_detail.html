@@ -1,0 +1,16 @@
+{% extends 'CBVApp/base.html' %}
+
+
+<div class="jumbotron">
+    {% block content %}
+    <h3>School Details are :</h3>
+    <p>{{School_detail.name}}</p>
+    <p>{{School_detail.pricipal}}</p>
+    <p>{{School_detail.location}}</p>
+    {% endblock content %}
+    <h3>STUDENTS:</h3>
+
+    {% for student in school_detail.students.all %}
+    <p>{{student.name}} who is {{student.age}} years old</p>
+    {% endfor %}
+</div>
